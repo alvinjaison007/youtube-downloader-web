@@ -6,6 +6,7 @@ services:
       - "5001:5001"
     volumes:
       - ./backend:/app
+      - ./backend/cookies.txt:/app/cookies.txt
 
   frontend:
     build: ./frontend
