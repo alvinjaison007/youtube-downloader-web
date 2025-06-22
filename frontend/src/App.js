@@ -12,7 +12,7 @@ function App() {
   // Check auth status on mount
   useEffect(() => {
     axios
-      .get("http://localhost:5001/check-auth", { withCredentials: true })
+      .get("http://13.201.73.198:5001/check-auth", { withCredentials: true })
       .then((res) => setAuthenticated(res.data.authenticated))
       .catch(() => setAuthenticated(false));
   }, []);
@@ -20,7 +20,7 @@ function App() {
   const handleLogin = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:5001/login",
+        "http://13.201.73.198:5001/login",
         { password },
         { withCredentials: true }
       );
@@ -37,7 +37,7 @@ function App() {
 
   const getFormats = async () => {
     const res = await axios.post(
-      "http://localhost:5001/formats",
+      "http://13.201.73.198:5001/formats",
       { url },
       { withCredentials: true }
     );
@@ -47,7 +47,7 @@ function App() {
 
   const downloadVideo = async (format_id) => {
     const res = await axios.post(
-      "http://localhost:5001/download",
+      "http://13.201.73.198:5001/download",
       { url, format_id },
       { responseType: "blob", withCredentials: true }
     );
