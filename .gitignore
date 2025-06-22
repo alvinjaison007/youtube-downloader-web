@@ -1,0 +1,56 @@
+# Node.js (React frontend)
+frontend/node_modules/
+frontend/build/
+frontend/.env
+
+# Python (Flask backend)
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+backend/venv/
+backend/env/
+backend/.mypy_cache/
+
+# Flask session files
+backend/*.sqlite
+backend/*.db
+backend/instance/
+
+# Certbot / Let's Encrypt (if added later)
+certbot/
+letsencrypt/
+
+# Docker
+*.log
+*.pid
+*.sock
+*.tar
+*.gz
+.dockerignore
+
+# VS Code
+.vscode/
+
+# macOS / Linux / Windows system files
+.DS_Store
+Thumbs.db
+
+# Python Poetry / Pipenv (if used)
+poetry.lock
+Pipfile.lock
+
+# Logs
+logs/
+*.log
+
+# Build cache
+__pycache__/
+.cache/
+
+# Ignore downloaded videos (if any)
+downloaded.*
+
+# Git & Compose artifacts
+.env
+.env.local
+docker-compose.override.yml
